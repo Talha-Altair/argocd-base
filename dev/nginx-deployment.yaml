@@ -18,5 +18,8 @@ spec:
       - name: nginx
         image: docker.io/talhaabdurrahman/env-tester:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8500
+        envFrom:
+        - configMapRef:
+            name: random
         imagePullPolicy: Always 
