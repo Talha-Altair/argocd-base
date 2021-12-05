@@ -4,6 +4,6 @@ metadata:
   name: random
 data:
   allowed: "maybe"
-  enemies: aliens
-  lives: "3"
+  enemies: "aliens"
+  lives: 3
   talha : "altair"
