@@ -5,5 +5,5 @@ metadata:
 data:
   allowed: "maybe"
   enemies: aliens
-  lives: 3
+  lives: "3"
   talha : "altair"
