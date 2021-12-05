@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://gitlab.com/nanuchi/argocd-app-config.git
+    repoURL: git@github.com:Talha-Altair/argocd-base.git
     targetRevision: HEAD
     path: dev
   destination: 
