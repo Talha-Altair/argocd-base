@@ -12,7 +12,7 @@ spec:
     path: altair
     helm:
       valueFiles:
-      - prod-values.yaml
+      - altair/prod-values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: altair
