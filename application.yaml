@@ -12,7 +12,7 @@ spec:
     path: dev
     helm:
       valueFiles:
-      - values-production.yaml
+      - dev-values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: altair
