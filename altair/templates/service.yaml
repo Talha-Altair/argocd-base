@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx
+  name: {{ .Values.deployment_name }}
   labels:
-    app: nginx
+    app: {{ .Values.deployment_name }}
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
 spec:
@@ -12,7 +12,7 @@ spec:
   - name: http
     port: 80
     protocol: TCP
-    targetPort: 5000
+    targetPort: 80
   selector:
-    app: nginx
+    app: {{ .Values.deployment_name }}
   type: LoadBalancer

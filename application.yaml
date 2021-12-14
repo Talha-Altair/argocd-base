@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nginx-proj
+  name: altair
   namespace: argocd
 spec:
   project: default
@@ -10,13 +10,16 @@ spec:
     repoURL: git@github.com:Talha-Altair/argocd-base.git
     targetRevision: HEAD
     path: dev
-  destination: 
+    helm:
+      valueFiles:
+      - values-production.yaml
+  destination:
     server: https://kubernetes.default.svc
-    namespace: nginx
+    namespace: altair
 
   syncPolicy:
     syncOptions:
-    - CreateNamespace=true
+      - CreateNamespace=true
 
     automated:
       selfHeal: true
