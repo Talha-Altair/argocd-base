@@ -10,9 +10,6 @@ spec:
     repoURL: git@github.com:Talha-Altair/argocd-base.git
     targetRevision: HEAD
     path: altair
-    helm:
-      valueFiles:
-      - altair/prod-values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: altair
